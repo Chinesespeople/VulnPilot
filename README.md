@@ -2,7 +2,7 @@
 
 VulnPilot 是一个 Burp Suite 扩展，用于把 Burp 流量与本地智能体工具联动起来，辅助进行站点渗透测试、漏洞证据整理、报告生成和参数加密链分析。
 
-> 本仓库只发布可直接导入 Burp Suite 的混淆版 JAR 文件，不包含源码。
+> 本仓库只发布可直接导入 Burp Suite 的 JAR 文件，不包含源码。
 
 ## 下载文件
 
@@ -111,4 +111,3 @@ Windows PowerShell 可使用：
 ```powershell
 Get-FileHash -Algorithm SHA256 .\dist\VulnPilot.jar
 ```
-
