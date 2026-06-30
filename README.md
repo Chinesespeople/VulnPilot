@@ -72,12 +72,6 @@ claude --version
 
 首次使用时按 Claude Code 的提示完成登录或认证配置。
 
-可以用下面命令测试 Claude Code 是否能正常执行：
-
-```bash
-claude -p --bare --dangerously-skip-permissions "请用一句话回复：VulnPilot 智能体连接正常"
-```
-
 ## 数据目录
 
 VulnPilot 会把配置、任务、报告、证据文件保存到用户本机软件数据目录下的：
