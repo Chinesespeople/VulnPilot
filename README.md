@@ -54,6 +54,15 @@ qwen --version
 
 如果某个命令不可用，该智能体不会出现在插件智能体列表中。
 
+## 智能体模型修改手册
+
+如果需要把智能体切换到 DeepSeek 或 OpenAI 兼容中转，可参考：
+
+- [Claude Code 接入 DeepSeek](docs/agents/claude-deepseek.md)
+- [Codex CLI 接入 DeepSeek](docs/agents/codex-deepseek.md)
+- [Mimo CLI 接入 DeepSeek](docs/agents/mimo-deepseek.md)
+- [Qwen Code 接入 DeepSeek](docs/agents/qwen-deepseek.md)
+
 ## 通过 Node.js 安装智能体命令
 
 先安装 Node.js，建议使用官方 LTS 版本：
