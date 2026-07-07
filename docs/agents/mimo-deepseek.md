@@ -7,8 +7,7 @@
 先确认本机命令可用：
 
 ```bash
-mimo --version
-mimo --help
+mimo
 ```
 
 Mimo 支持在 TUI 中添加 Custom Provider，也支持通过配置文件管理。官方 README 中说明配置文件位置为：
@@ -21,10 +20,8 @@ Mimo 支持在 TUI 中添加 Custom Provider，也支持通过配置文件管理
 也可以使用 providers 命令：
 
 ```bash
-mimo providers --help
 mimo providers list
-mimo providers login
-mimo models --help
+mimo models
 ```
 
 ## DeepSeek 模型
@@ -84,7 +81,7 @@ provider/model
 示例：
 
 ```bash
-mimo run --format json --dangerously-skip-permissions -m deepseek/deepseek-v4-pro "请只回复：MIMO_DEEPSEEK_OK"
+mimo
 ```
 
 如果你的 provider ID 不是 `deepseek`，请使用 `mimo providers list` 中显示的 ID。
@@ -92,13 +89,12 @@ mimo run --format json --dangerously-skip-permissions -m deepseek/deepseek-v4-pr
 ## 验证
 
 ```bash
-mimo run --format json --dangerously-skip-permissions "请只回复：MIMO_DEEPSEEK_OK"
+mimo
 ```
 
-如果能看到 JSON 输出，VulnPilot 中选择 `mimo` 后即可使用该配置。
+如果能正常进入或返回，VulnPilot 中选择 `mimo` 后即可使用该配置。
 
 ## 注意
 
-- 不要把真实 API Key 提交到 GitHub。
 - Mimo 的 provider ID 以本机 `mimo providers list` 显示为准。
 - VulnPilot 只负责启动 `mimo` 命令，不会覆盖你的 Mimo 模型配置。

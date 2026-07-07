@@ -7,8 +7,7 @@
 先确认本机命令可用：
 
 ```bash
-codex --version
-codex --help
+codex
 ```
 
 Codex CLI 读取用户配置：
@@ -20,9 +19,7 @@ Codex CLI 读取用户配置：
 也可以用命令行 `-c key=value` 临时覆盖配置。不同 Codex 版本支持的 provider 字段可能变化，修改前建议先看：
 
 ```bash
-codex --help
-codex exec --help
-codex debug models
+codex
 ```
 
 ## DeepSeek 模型
@@ -75,22 +72,18 @@ $env:OPENAI_API_KEY="sk-你的DeepSeekKey"
 
 ```powershell
 $env:OPENAI_API_KEY="sk-你的DeepSeekKey"
-codex exec --json --dangerously-bypass-approvals-and-sandbox --skip-git-repo-check `
-  -c model_provider='"deepseek"' `
-  -c model='"deepseek-v4-pro"' `
-  "请只回复：CODEX_DEEPSEEK_OK"
+codex
 ```
 
 ## 验证
 
 ```bash
-codex exec --json --dangerously-bypass-approvals-and-sandbox --skip-git-repo-check "请只回复：CODEX_DEEPSEEK_OK"
+codex
 ```
 
-如果能看到正常 JSON 输出，VulnPilot 中选择 `codex` 后即可使用该配置。
+如果能正常进入或返回，VulnPilot 中选择 `codex` 后即可使用该配置。
 
 ## 注意
 
-- 不要把真实 API Key 写入公开仓库。
-- Codex 的第三方 provider 字段随版本变化较快，以当前 `codex --help` 和本机 `~/.codex/config.toml` 为准。
+- Codex 的第三方 provider 字段随版本变化较快，以当前本机帮助和 `~/.codex/config.toml` 为准。
 - VulnPilot 只负责启动 `codex` 命令，不负责替用户保存 Codex 的模型配置。

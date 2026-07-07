@@ -7,8 +7,7 @@
 先确认本机命令可用：
 
 ```bash
-claude --version
-claude --help
+claude
 ```
 
 Claude Code 支持通过环境变量配置 Anthropic 协议兼容服务。DeepSeek 官方 Anthropic 兼容入口为：
@@ -35,7 +34,7 @@ $env:ANTHROPIC_MODEL="deepseek-v4-pro"
 $env:ANTHROPIC_DEFAULT_SONNET_MODEL="deepseek-v4-pro"
 $env:ANTHROPIC_DEFAULT_OPUS_MODEL="deepseek-v4-pro"
 $env:ANTHROPIC_DEFAULT_HAIKU_MODEL="deepseek-v4-flash"
-claude -p --output-format stream-json --dangerously-skip-permissions --verbose "你好"
+claude
 ```
 
 ## 写入 Claude Code 配置
@@ -64,13 +63,12 @@ claude -p --output-format stream-json --dangerously-skip-permissions --verbose "
 ## 验证
 
 ```bash
-claude -p --output-format stream-json --dangerously-skip-permissions --verbose "请只回复：CLAUDE_DEEPSEEK_OK"
+claude
 ```
 
-如果能看到模型正常返回，VulnPilot 中选择 `claude` 后即可使用该配置。
+如果能正常启动并完成认证，VulnPilot 中选择 `claude` 后即可使用该配置。
 
 ## 注意
 
-- 不要把真实 API Key 提交到 GitHub。
 - 如果使用中转服务，把 `ANTHROPIC_BASE_URL` 改成中转提供的 Anthropic 兼容地址。
 - VulnPilot 会启动系统中的 `claude` 命令，不单独覆盖你的模型配置。

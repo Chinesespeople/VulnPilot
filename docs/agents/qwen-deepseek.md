@@ -7,8 +7,7 @@
 先确认本机命令可用：
 
 ```bash
-qwen --version
-qwen --help
+qwen
 ```
 
 Qwen Code 支持 OpenAI、Anthropic、Gemini、Qwen 和第三方 Provider。配置文件通常位于：
@@ -97,14 +96,13 @@ qwen
 ## 验证
 
 ```bash
-qwen -p --output-format stream-json --yolo "请只回复：QWEN_DEEPSEEK_OK"
+qwen
 ```
 
-如果能看到 `QWEN_DEEPSEEK_OK`，VulnPilot 中选择 `qwen` 后即可使用该配置。
+如果能正常启动并完成认证，VulnPilot 中选择 `qwen` 后即可使用该配置。
 
 ## 注意
 
-- 不要把真实 API Key 提交到 GitHub。
 - 如果使用中转服务，把 `baseUrl` 改成中转提供的 OpenAI 兼容地址。
 - `generationConfig.extra_body.enable_thinking` 是否可用取决于模型和服务端，报错时可以删除该段。
 - VulnPilot 只负责启动 `qwen` 命令，不会覆盖你的 Qwen 模型配置。
