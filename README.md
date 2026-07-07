@@ -54,7 +54,7 @@ qwen --version
 
 如果某个命令不可用，该智能体不会出现在插件智能体列表中。
 
-## 通过 Node.js 安装 Claude Code
+## 通过 Node.js 安装智能体命令
 
 先安装 Node.js，建议使用官方 LTS 版本：
 
@@ -67,19 +67,25 @@ node -v
 npm -v
 ```
 
-通过 npm 安装 Claude Code：
+按需安装智能体 CLI：
 
 ```bash
 npm install -g @anthropic-ai/claude-code
+npm install -g @openai/codex
+npm install -g @mimo-ai/cli
+npm install -g @qwen-code/qwen-code
 ```
 
 确认安装成功：
 
 ```bash
 claude --version
+codex --version
+mimo --version
+qwen --version
 ```
 
-首次使用时按 Claude Code 的提示完成登录或认证配置。
+首次使用时按对应 CLI 的提示完成登录或认证配置。VulnPilot 会在启动时自动检测这些命令，未安装的智能体不会显示在插件列表中。
 
 ## 数据目录
 
