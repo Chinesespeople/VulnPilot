@@ -1,7 +1,5 @@
 # VulnPilot
 
-当前发布：`Release 18`
-
 VulnPilot 是一个 Burp Suite Java 扩展，用于把 Burp 中的 HTTP 流量、HOST 资产、工作空间和本地智能体连接起来，辅助完成渗透测试、代码审计、漏洞证据整理、报告生成、参数加密链还原和 Intruder Payload Processing 编码器生成。
 
 ## 下载
@@ -201,6 +199,10 @@ Get-FileHash -Algorithm SHA256 .\VulnPilot.jar
 ```text
 2ABFCE0D0A94BEF9EFF054FCE93FE1F9AF799803AAC03215FC5ADADFFF388BFA
 ```
+
+## 问题反馈
+
+如果在使用过程中发现 Bug、兼容性问题或其他异常，请前往 [GitHub Issues](https://github.com/Chinesespeople/VulnPilot/issues) 提交反馈。建议同时提供问题现象、复现步骤、Burp Suite 和 Java 版本以及相关错误日志，方便定位和处理。
 
 ## 使用范围
 
